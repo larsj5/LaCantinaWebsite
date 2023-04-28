@@ -27,5 +27,5 @@ Italian restaurant serving all the classics like pasta, pizza, risotto, and othe
 * Panna Cotta
 
 ## Generic information about the restaurant (including address and opening hours)
-Address: 17 Rue de la Champs Elysee, Paris, France
+Address: 17 Rue des Champs Elysées, Paris, 75000 France
 Opening Hours: Tuesday - Sunday, 8pm - 12pm
