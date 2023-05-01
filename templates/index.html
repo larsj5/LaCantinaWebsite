@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    <!-- Need to Update this -->
+    {% include 'menu.html' with {'animalTypes': animalTypes} %}
+{% endblock %}
+    
+{% block content %}
+    <main class="cards">
+        <!-- Need to Update this -->
+        {% for animal in animals %}
+            <div class="card">
+                <div class="card-header">
+                    <!-- Need to Update this -->
+                    <h3>{{ animal.name }} ({{animal.type}})</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Need to Update all this -->
+                    <img src="{{ animal.image }}" class="img" alt="{{ animal.name }}">
+                    <p>{{ animal.bio }}</p> 
+                    <a href="details.php?a={{ animal.id }}" class="btn">Read more</a>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}
