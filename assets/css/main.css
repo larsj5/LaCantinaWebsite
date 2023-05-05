@@ -86,6 +86,7 @@ div.address, div.about, div.hours {
     color: white;
     text-decoration: none;
     justify-content: center;
+    text-align: center;
 }
 
 
