@@ -8,11 +8,11 @@ CONSTRAINT Number1 PRIMARY KEY(meal_id));
 
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price)
-VALUES(1,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99);
-INSERT INTO Meals(meal_id,name_meal,description,price)
-VALUES(2,'STARTER','Mozarella in Carozza','Deep fried Mozzarella with Bread Crumbs',7.99);
+VALUES(01,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99);
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
-VALUES(3,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99);
+VALUES(02,'STARTER','Mozarella in Carozza','Deep fried Mozzarella with Bread Crumbs',7.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
+VALUES(03,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99);
 
 
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
@@ -29,5 +29,12 @@ INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
 VALUES(21,'DESSERT','Panna Cotta','with berries and strawberry topping',5.99);
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
 VALUES(22,'DESSERT','Gelato','Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99);
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
+VALUES(30,'DRINK','Mineral Water','Evian, Levissima, San pelegrino',2.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
+VALUES(31,'DRINK','White Wine','Palatino (sweet white wine from Sicily)',4.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price)
+VALUES(32,'DRINK','Red Wine','Fenici (from Bordeaux)',4.99);
 
 
