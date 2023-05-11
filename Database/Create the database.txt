@@ -1,0 +1,33 @@
+CREATE TABLE Meals
+(meal_id INTEGER NOT NULL,
+type_meal VARCHAR(30) NOT NULL,
+name_meal VARCHAR(30) NOT NULL,
+desc TEXT NOT NULL,
+price DECIMAL(5,2) NOT NULL,
+CONSTRAINT Number1 PRIMARY KEY(meal_id));
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal, desc,price)
+VALUES(1,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99);
+INSERT INTO Meals(meal_id,name_meal,desc,price)
+VALUES(2,'STARTER','Mozarella in Carozza','Deep fried Mozzarella with Bread Crumbs',7.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,price)
+VALUES(3,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99);
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,desc,price)
+VALUES(10,'MAIN','Carbonara','Egg, Guanciale Amatriciano Sa.No. and Pecorino Romano Deroma Dop',12.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal, desc,price)
+VALUES(11,'MAIN','Carpaccio','Marinated  raw Veal with Rocket and Parmigiano',16.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,desc,price)
+VALUES(12,'MAIN','Lasagna','Lasagne with bolognese sauce and french bechamel',14.99);
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,desc,price)
+VALUES(20,'DESSERT','Tiramisu','Typical coffee tiramisu',5.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,desc,price)
+VALUES(21,'DESSERT','Panna Cotta','with berries and strawberry topping',5.99);
+INSERT INTO Meals(meal_id,type_meal,name_meal,desc,price)
+VALUES(22,'DESSERT','Gelato','Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99);
+
+
