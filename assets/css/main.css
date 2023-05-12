@@ -7,7 +7,7 @@ html {
 }
 
 body { 
-    background-color: #1695da;
+    background-color: #fcd483;
 }
 
 header {
@@ -39,9 +39,11 @@ header p {
     font-family: 'Kenia', cursive;
  }
 
+ 
+
 /* main page options menu */
 .button-options {
-    background-color: #1695da;
+    background-color: #fcd483;
     margin: 50px;
   }
   
@@ -172,25 +174,32 @@ nav.menu ul li a {
 
 
 .starters {
-    background: url(b1.jpeg) 100%;
+    background: url(b1.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.menu-bg{
+    background: url(background.jpg) 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 .mains {
-    background: url(b2.jpeg) 100%;
+    background: url(b2.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .desserts {
-    background: url(b3.jpeg) 100%;
+    background: url(b3.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .drinks {
-    background: url(b4.jpeg) 100%;
+    background: url(b4.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -201,6 +210,8 @@ nav.menu ul li a {
     background-color: white;
     margin: 20px;
     display: flex;
+    flex-direction: column;
+    border-radius: 25px;
     cursor: pointer;
     transition: 0.3s all;
     width: 50%;
@@ -220,8 +231,17 @@ nav.menu ul li a {
 .item-info {
     padding: 20px;
     line-height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
     
 }
+
+.inside-item {
+    background-color: white;
+    margin: 20px;
+    flex-direction: column;
+}
+
 
 section {
     padding: 80px;
@@ -241,6 +261,11 @@ section {
     font-weight: bold;
     font-size: 22px;
 }
+img.item {
+    margin: 10px;
+    align-items: center;
+    border-radius: 10px;
+ }
 
 section img{
     width: 300px;
