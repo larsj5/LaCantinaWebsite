@@ -70,8 +70,8 @@ if (!$conn) {
 
         <main id="main">
 
-            <section id="starters" class="starters">
-                <div class="item">
+            <section id="starters" class="menu-bg">
+                
                     <?php 
                     // Récupération des éléments de la table Meals
                     $sql = "SELECT * FROM Meals WHERE type_meal = 'STARTER'";
@@ -81,10 +81,14 @@ if (!$conn) {
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<div class='item'>";
+                            echo "<div class='item-info'>";
+                            echo "<div class='inside-item'>";
                             echo "<h2>" . $row['name_meal'] . "</h2>";
-                            echo "<p>" . $row['description'] . "</p>";
+                            echo "<p class='item-info'>" . $row['description'] . "</p>";
                             echo "<p class='price'>" . $row['price'] . " €</p>";
-                            echo "<img src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
+                            echo "<img class='item' src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
                             echo "</div>";
                         }
                     } else {
@@ -92,13 +96,13 @@ if (!$conn) {
                     }
                     ?>
 
-                </div>
+                
 
             </section>
 
-            <section id="mains" class="mains">
+            <section id="mains" class="menu-bg">
 
-                <div class="item">
+                
                 <?php 
                     // Récupération des éléments de la table Meals
                     $sql = "SELECT * FROM Meals WHERE type_meal = 'MAIN'";
@@ -108,10 +112,14 @@ if (!$conn) {
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<div class='item'>";
+                            echo "<div class='item-info'>";
+                            echo "<div class='inside-item'>";
                             echo "<h2>" . $row['name_meal'] . "</h2>";
-                            echo "<p>" . $row['description'] . "</p>";
+                            echo "<p class='item-info'>" . $row['description'] . "</p>";
                             echo "<p class='price'>" . $row['price'] . " €</p>";
-                            echo "<img src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
+                            echo "<img class='item' src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
                             echo "</div>";
                         }
                     } else {
@@ -119,13 +127,13 @@ if (!$conn) {
                     }
                     ?>
 
-                </div>
+                
 
             </section>
 
-            <section id="desserts" class="desserts">
+            <section id="desserts" class="menu-bg">
 
-                <div class="item">
+                
                 <?php 
                     // Récupération des éléments de la table Meals
                     $sql = "SELECT * FROM Meals WHERE type_meal = 'DESSERT'";
@@ -135,23 +143,27 @@ if (!$conn) {
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<div class='item'>";
+                            echo "<div class='item-info'>";
+                            echo "<div class='inside-item'>";
                             echo "<h2>" . $row['name_meal'] . "</h2>";
-                            echo "<p>" . $row['description'] . "</p>";
+                            echo "<p class='item-info'>" . $row['description'] . "</p>";
                             echo "<p class='price'>" . $row['price'] . " €</p>";
-                            echo "<img src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
+                            echo "<img class='item' src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
                             echo "</div>";
                         }
                     } else {
                     echo "0 résultats";
                     }
                     ?>
-                </div>
+               
 
             </section>
 
-            <section id="drinks" class="drinks">
+            <section id="drinks" class="menu-bg">
 
-                <div class="item">
+                
                 <?php 
                     // Récupération des éléments de la table Meals
                     $sql = "SELECT * FROM Meals WHERE type_meal = 'DRINK'";
@@ -161,17 +173,21 @@ if (!$conn) {
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<div class='item'>";
+                            echo "<div class='item-info'>";
+                            echo "<div class='inside-item'>";
                             echo "<h2>" . $row['name_meal'] . "</h2>";
-                            echo "<p>" . $row['description'] . "</p>";
+                            echo "<p class='item-info'>" . $row['description'] . "</p>";
                             echo "<p class='price'>" . $row['price'] . " €</p>";
-                            echo "<img src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
+                            echo "<img class='item' src='" . $row['img_path'] . "' alt='" . $row['name_meal'] . "'>";
+                            echo "</div>";
                             echo "</div>";
                         }
                     } else {
                     echo "0 résultats";
                     }
                     ?>
-                </div>
+                
 
             </section>
 
