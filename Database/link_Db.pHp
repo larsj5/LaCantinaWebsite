@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 // Récupération des données
-$sql = "SELECT name_meal, description, price FROM meals";
+$starters = "SELECT name_meal, description, price  FROM meals WHERE type_meal='STARTER'";
 $resultat = mysqli_query($conn, $sql);
 
 ?>
