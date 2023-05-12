@@ -16,3 +16,4 @@ if (!$conn) {
 $sql = "SELECT name_meal, description, price FROM meals";
 $resultat = mysqli_query($conn, $sql);
 
+?>
