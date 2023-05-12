@@ -282,10 +282,12 @@ footer p {
 /* Contact Us Form */
 .page-title {
     font-family: 'Kenia', cursive;
+    font-size: 40px;
     color: white;
     text-decoration: none;
     justify-content: center;
     text-align: center;
+    margin: 20px;
 }
 
 .contacts {
