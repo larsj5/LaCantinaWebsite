@@ -174,32 +174,32 @@ nav.menu ul li a {
 
 
 .starters {
-    background: url(b1.jpg) 100%;
+    background: url(../images/b1.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .menu-bg{
-    background: url(background.jpg) 100%;
+    background: url(../images/background.jpg) 100%;
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 .mains {
-    background: url(b2.jpg) 100%;
+    background: url(../images/b2.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .desserts {
-    background: url(b3.jpg) 100%;
+    background: url(../images/b3.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .drinks {
-    background: url(b4.jpg) 100%;
+    background: url(../images/b4.jpg) 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
