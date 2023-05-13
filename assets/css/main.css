@@ -298,7 +298,7 @@ footer p {
     text-align: center;
 }
 
-.contact-form {
+.contact-form, .reservations-form {
     border-radius: 25px;
     margin: 50px;
     padding: 15px;
@@ -329,14 +329,14 @@ footer p {
     color: red;
   }
 
-  input[type=text], input[type="email"], select, textarea {
+input[type=text], input[type="email"], select, textarea, input[type="number"], input[type="date"] {
     width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
   }
-  
+
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;

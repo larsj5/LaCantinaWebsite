@@ -36,7 +36,87 @@
         <div class="page-title">
             <h1>Make a Reservation</h1>
         </div>
+
+        <div class="reservations-form">
+            <div class="form-title">
+                <h2>Make a Reservation</h2>
+                <p>* required field</p><br>
+                </div>
+
+            <div class="form-body">
+                <span class="validation"></span>
+                <form id="contact" method="POST" action="../reservation.php">   
+                <div class="row">
+                    <!-- Date -->
+                    <div class="col-25">                                     
+                        <label for="date">Please enter the Desired Date *</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" name="date" id="date" required value="">
+                        <span class="validation"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Time -->
+                    <div class="col-25">                                     
+                        <label for="date">Please enter the Desired Time *</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="time" name="time" required>
+                            <option value="" disabled selected>Select a Time</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Name -->
+                    <div class="col-25">                                     
+                        <label for="name">Please enter your Name *</label>
+                    </div>
+                    <div class="col-75">
+                        <input placeholder="your name" type="text" name="name" id="name" required value="">
+                        <span class="validation"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Email -->
+                    <div class="col-25">                                     
+                        <label for="email">Please enter your Email Address *</label>
+                    </div>
+                    <div class="col-75">
+                        <input placeholder="your@email.com" type="email" name="email" id="email" required value="">
+                        <span class="validation"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Number of Guests -->
+                    <div class="col-25">                                     
+                        <label for="guests">Please enter the Number of Guests (1-10) *</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="guests" name="guests" min="1" max="10" required>
+                        <span class="validation"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">                                        
+                        <label for="message">Please enter any Special Requests/Allergies </label>
+                    </div>
+                    <div class="col-75">
+                        <textarea maxlength="150" id="message" name="message" placeholder="Special requests.."></textarea>
+                        <span class="validation"></span>
+                    </div>  
+                </div>    
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>                    
+            </form>
+            <br>
+            <a href="layout.html" class="btn">Go back to the home page</a>
+            </div>
+        </div>
         
-        <script src="" async defer></script>
+        <script src="../assets/js/timeoptions.js" async defer></script>
     </body>
 </html>
