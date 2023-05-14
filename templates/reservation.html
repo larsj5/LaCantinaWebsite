@@ -44,7 +44,7 @@
                 </div>
 
             <div class="form-body">
-                <span class="validation"></span>
+                <span class="validation">{{ validations.pagemessage }}</span>
                 <form id="contact" method="POST" action="../reservation.php">   
                 <div class="row">
                     <!-- Date -->
@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-75">
                         <input type="date" name="date" id="date" required value="">
-                        <span class="validation"></span>
+                        <span class="validation">{{ validations.dateErr }}</span>
                     </div>
                 </div>
                 <div class="row">
@@ -74,7 +74,7 @@
                     </div>
                     <div class="col-75">
                         <input placeholder="your name" type="text" name="name" id="name" required value="">
-                        <span class="validation"></span>
+                        <span class="validation">{{ validations.nameErr }}</span>
                     </div>
                 </div>
                 <div class="row">
@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-75">
                         <input placeholder="your@email.com" type="email" name="email" id="email" required value="">
-                        <span class="validation"></span>
+                        <span class="validation">{{ validations.emailErr }}</span>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col-75">
                         <input type="number" id="guests" name="guests" min="1" max="10" required>
-                        <span class="validation"></span>
+                        <span class="validation">{{ validations.guestsErr }}</span>
                     </div>
                 </div>
 
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-75">
                         <textarea maxlength="150" id="message" name="message" placeholder="Special requests.."></textarea>
-                        <span class="validation"></span>
+                        <span class="validation">{{ validations.messageErr }}</span>
                     </div>  
                 </div>    
                 <div class="row">
@@ -113,7 +113,7 @@
                 </div>                    
             </form>
             <br>
-            <a href="layout.html" class="btn">Go back to the home page</a>
+            <a href="templates/layout.html" class="btn">Go back to the home page</a>
             </div>
         </div>
         

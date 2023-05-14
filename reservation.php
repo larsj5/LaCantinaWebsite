@@ -119,16 +119,13 @@
                 die("La connexion a échoué : " . mysqli_connect_error());
             }
 
-            debug_to_console($date);
-            debug_to_console($time);
-            debug_to_console($name);
-            debug_to_console($email);
-            debug_to_console($guests);
-            debug_to_console($message);
-
             $sql = "INSERT INTO Reservations (date, time, name, email, guests, requests) VALUES ('$date', '$time', '$name', '$email', $guests, '$message')";
-            $message = mysqli_query($conn, $sql);
-            $validations['pagemessage'] = "Form submitted successfully. Thank you!";
+            if (mysqli_query($conn, $sql)){
+                $validations['pagemessage'] = "Form submitted successfully. Thank you!";
+            }
+            else {
+                $validations['pagemessage'] = "Sorry we're having trouble on our end taking your reservation. Please call us to make a reservation, we apologize for the inconvenience.";
+            }
         }
         else
         {
