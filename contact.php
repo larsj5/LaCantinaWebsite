@@ -1,7 +1,6 @@
 <?php
     require_once __DIR__.'/bootstrap.php';
     require_once __DIR__.'/database.php';
-    require_once __DIR__.'/menu.php';
 
     function clean_input($data) {
         $data = trim($data);
@@ -61,8 +60,23 @@
         if (empty($emailErr) && empty($typeErr) && empty($messageErr))
         {
             $formvalues = [];
-            //Onward processing using PHPMailer using $type = $email = $message
-            //mail() or PHPMailer logic here....
+
+            // Connexion à la base de données
+            $servername = "127.0.0.1";
+            $username = "root";
+            $password = "";
+            $dbname = "resto";
+
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            // Vérification de la connexion
+            if (!$conn) {
+            die("La connexion a échoué : " . mysqli_connect_error());
+            }
+
+            $sql = "INSERT INTO Contact VALUES ('$type','$email','$message')";
+            if (mysqli_query($conn, $sql));
+
             $validations['pagemessage'] = "Form submitted successfully. Thank you!";
         }
         else
@@ -70,19 +84,17 @@
             //Repopulate text fields with submitted data 
             $formvalues['email'] = $email;
             $formvalues['message'] = $message;
-
             $validations['pagemessage'] = "There are some issues with this form";
         }
         
         //Render view with validations (or success message)
         echo $twig->render('contact.html', [ 
             'validations' => $validations,
-            'formvalues' => $formvalues, 
-            'animalTypes' => $animalTypes] );
-
+            'formvalues' => $formvalues]);
     }
+
     else
     {
         //Render view without validations
-        echo $twig->render('contact.html', ['animalTypes' => $animalTypes] );
+        echo $twig->render('contact.html');
     }
