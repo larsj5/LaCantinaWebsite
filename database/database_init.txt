@@ -1,0 +1,56 @@
+CREATE TABLE Meals
+(meal_id INTEGER NOT NULL,
+type_meal VARCHAR(30) NOT NULL,
+name_meal VARCHAR(30) NOT NULL,
+description TEXT NOT NULL,
+price DECIMAL(5,2) NOT NULL,
+img_path TEXT NOT NULL,
+CONSTRAINT Number1 PRIMARY KEY(meal_id));
+
+CREATE TABLE Contact
+(type_comp VARCHAR(30) NOT NULL,
+mail VARCHAR(30) NOT NULL,
+message TEXT NOT NULL);
+
+CREATE TABLE Reservations (
+reservation_id INT AUTO_INCREMENT PRIMARY KEY,
+date DATE NOT NULL,
+time TIME NOT NULL,
+name VARCHAR(100) NOT NULL,
+email VARCHAR(255) NOT NULL,
+guests INT NOT NULL,
+requests TEXT NOT NULL
+);
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,img_path)
+VALUES(01,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99,'../assets/images/meals_img/bruschetta.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(02,'STARTER','Mozarella in Carozza','Deep fried Mozzarella with Bread Crumbs',7.99,'../assets/images/meals_img/mozza_sticks.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(03,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99,'../assets/images/meals_img/caprese_salad.jpg');
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(10,'MAIN','Carbonara','Egg, Guanciale Amatriciano Sa.No. and Pecorino Romano Deroma Dop',12.99,'../assets/images/meals_img/carbonara.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,img_path)
+VALUES(11,'MAIN','Carpaccio','Marinated  raw Veal with Rocket and Parmigiano',16.99,'../assets/images/meals_img/carpaccio.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(12,'MAIN','Lasagna','Lasagne with bolognese sauce and french bechamel',14.99,'../assets/images/meals_img/lasagna.jpg');
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(20,'DESSERT','Tiramisu','Typical coffee tiramisu',5.99,'../images/meals_img/tiramisu.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(21,'DESSERT','Panna Cotta','with berries and strawberry topping',5.99,'../assets/images/meals_img/panna_cotta.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(22,'DESSERT','Gelato','Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99,'../assets/images/meals_img/gelato');
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(30,'DRINK','Mineral Water','Evian, Levissima, San pelegrino',2.99,'../assets/images/meals_img/water.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(31,'DRINK','White Wine','Palatino (sweet white wine from Sicily)',4.99,'../assets/images/meals_img/white_wine.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,img_path)
+VALUES(32,'DRINK','Red Wine','Fenici (from Bordeaux)',4.99,'../assets/images/meals_img/red_wine.jpg');
+
+

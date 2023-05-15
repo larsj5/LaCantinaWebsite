@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    background-color: #fcd483;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.title-box {
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    padding: 50px;
+    box-shadow: -13px 13px 2px 1px rgb(0, 0, 0, .2);
+}
+
+header h1 {
+    font-size: 80px;
+    text-align: center;
+}
+
+header p {
+    font-size: 25px;
+    text-align: center;
+}
+
+ div.title-box h1,header p,li {
+    font-family: 'Kenia', cursive;
+ }
+
+ 
+
+/* main page options menu */
+.button-options {
+    background-color: #fcd483;
+    margin: 50px;
+  }
+  
+.options ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.options li {
+    height: auto;
+}
+
+.options a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Kenia', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+nav.options ul li:hover{
+    transform: scale(0.90);
+    transition: 0.3s all;
+}
+
+
+/* Media query for responsive behavior */
+@media (max-width: 1150px) {
+.options ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+}
+
+/* Text Under Options on Main Screen */
+div.address, div.about, div.hours{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kenia', cursive;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* slider */
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    animation: glisse 15s infinite ease;
+}
+
+.slide {
+    opacity: 0.5;
+}
+
+
+@keyframes glisse {
+
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-500px);
+    }
+    66% {
+        transform: translateX(-900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* nav menu */ 
+.section-menu {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-130px);
+}
+
+nav.menu {
+    width: calc(500px * 4);
+}
+
+nav.menu ul{
+    display: flex;
+}
+
+nav.menu ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+}
+
+nav.menu ul li:hover{
+    transform: scale(0.90);
+    transition: 0.3s all;
+}
+
+nav.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.nav-item {
+    flex: 1;
+    height: 300px;
+}
+
+
+
+.starters {
+    background: url(../images/b1.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu-bg{
+    background: url(../images/background.jpg) 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.mains {
+    background: url(../images/b2.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.desserts {
+    background: url(../images/b3.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.drinks {
+    background: url(../images/b4.jpg) 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* section */
+
+.item {
+    background-color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s all;
+    width: 50%;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    transition: 0.3s all;
+}
+
+.item:hover {
+    transition: 0.3s all;
+    box-shadow: -8px 8px 2px 1px rgb(0, 0, 0, .1);
+
+}
+
+.item-info {
+    padding: 20px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+.inside-item {
+    background-color: white;
+    margin: 20px;
+    flex-direction: column;
+}
+
+
+section {
+    padding: 80px;
+    font-family: 'Martel', serif;
+}
+
+.item-info h3 {
+    font-size: 25px;
+}
+
+.item-info hr {
+    margin: 10px 0 10px 0 ;
+    opacity: 0.5;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 22px;
+}
+img.item {
+    margin: 10px;
+    align-items: center;
+    border-radius: 10px;
+ }
+
+section img{
+    width: 300px;
+}
+
+/* menu sticky */
+
+.sticky {
+    position: fixed;
+    width: 500px;
+    top: 30vh;
+    right: 50px;
+    transform: translateY(-10px);
+    transition: 0.2s all;
+}
+
+.sticky + #main {
+    padding-top : 200px;
+}
+
+.sticky nav.menu ul {
+    flex-direction: column;
+
+}
+
+.sticky nav.menu ul li {
+    margin: 2px;
+    
+}
+
+footer p {
+    font-size: 27px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-family: 'Martel', serif;
+}
+
+/* Contact Us Form */
+.page-title {
+    font-family: 'Kenia', cursive;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.contacts {
+    font-family: 'Kenia', cursive;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-form, .reservations-form {
+    border-radius: 25px;
+    margin: 50px;
+    padding: 15px;
+    background-color: white;
+    
+}
+
+.form-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1695da;
+    text-decoration: none;
+    font-size: larger;
+    text-align: center;
+}
+
+.form-body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #1695da;
+    text-decoration: none;
+}
+.form-body a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.validation {
+    display: block;
+    color: red;
+  }
+
+input[type=text], input[type="email"], select, textarea, input[type="number"], input[type="date"] {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 60%;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
