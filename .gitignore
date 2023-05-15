@@ -1,4 +1,4 @@
 bootstrap.php
 composer.json
 composer.lock
-/vendor/
+/vendor
