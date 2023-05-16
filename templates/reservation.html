@@ -16,6 +16,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <header>
             <div class="title-box">
                 <h1>La Cantina</h1>
@@ -32,6 +33,10 @@
             </div>
 
         </header>
+
+        {% block menu %}
+            {% include 'dropdown.html' %}
+        {% endblock %}
 
         <div class="page-title">
             <h1>Make a Reservation</h1>

@@ -60,24 +60,16 @@
         if (empty($emailErr) && empty($typeErr) && empty($messageErr))
         {
             $formvalues = [];
-
-            // Connexion à la base de données
-            $servername = "127.0.0.1";
-            $username = "root";
-            $password = "";
-            $dbname = "resto";
-
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-            // Vérification de la connexion
-            if (!$conn) {
-            die("La connexion a échoué : " . mysqli_connect_error());
-            }
-
+            
+            // Insert into database
+            $db = new Db();
             $sql = "INSERT INTO Contact VALUES ('$type','$email','$message')";
-            if (mysqli_query($conn, $sql));
-
-            $validations['pagemessage'] = "Form submitted successfully. Thank you!";
+            if ($db -> query($sql)) {
+                $validations['pagemessage'] = "Form submitted successfully. Thank you!";
+            }
+            else {
+                $validations['pagemessage'] = "Having issues on our end, we apologize for the inconvenience. Please give us a call/shoot us an email!";
+            }
         }
         else
         {

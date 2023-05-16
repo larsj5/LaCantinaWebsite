@@ -58,6 +58,10 @@
             <h1>Menu</h1>
         </div>
 
+        {% block menu %}
+            {% include 'dropdown.html' %}
+        {% endblock %}
+
 
         <div id="sticky-header" class="section-menu sticky">
             <nav class="menu">

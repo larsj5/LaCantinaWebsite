@@ -106,21 +106,10 @@
         {
             $formvalues = [];
 
-            // Connexion à la base de données
-            $servername = "127.0.0.1";
-            $username = "root";
-            $password = "";
-            $dbname = "resto";
-
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-            // Vérification de la connexion
-            if (!$conn) {
-                die("La connexion a échoué : " . mysqli_connect_error());
-            }
-
+            // Submit to database
+            $db = new Db();
             $sql = "INSERT INTO Reservations (date, time, name, email, guests, requests) VALUES ('$date', '$time', '$name', '$email', $guests, '$message')";
-            if (mysqli_query($conn, $sql)){
+            if ($db -> query($sql)){
                 $validations['pagemessage'] = "Form submitted successfully. Thank you!";
             }
             else {
