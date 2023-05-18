@@ -10,3 +10,4 @@ $db = new Db();
 $menu = $db -> select("SELECT * FROM MEALS");
 
 echo $twig->render('menu2.html', ['menu' => $menu]);
+
