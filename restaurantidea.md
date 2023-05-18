@@ -13,3 +13,12 @@ php -S localhost:8000
 * -> Need to add more to each menu item for the details page (ingredients, gluten free, vegan, etc.)
 * -> And have a way to favorite the item
 
+FROM PROFESSOR:
+* -> All of our paths for css and images are currently messed up because we are accessing from the php page not the html
+* -> Need to block access to the templates folder with .htaccess
+* -> Need to create a seperate layout for main page and for other pages, and extend that layout
+* -> Need to have an index.php for the home page (can just render the page)
+* -> Scrap the original menu altogether and go with the menu2.php
+* -> All of the photos are way too big and need to be compressed to 50 kb or smaller
+
+
