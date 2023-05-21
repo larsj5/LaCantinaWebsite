@@ -28,15 +28,23 @@ requests TEXT NOT NULL
 );
 
 
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(01,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99,'assets/images/meals_img/bruschetta.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(02,'STARTER','Mozarella in Carozza','Deep Fried Mozzarella with Bread Crumbs',7.99,'assets/images/meals_img/mozza_sticks.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(03,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99,'assets/images/meals_img/caprese_salad.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(01,'STARTER','Bruschetta','The classic Italian Appetizer, made with Fresh Homemade Bread', 
+        5.99,'Cherry Tomatoes, Garlic, Bread, Basil and Pesto','No', 'Yes', 'Yes', 'Yes',
+        'assets/images/meals_img/bruschetta.jpg');
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(02,'STARTER','Mozarella in Carozza','Deep Fried Mozzarella with Bread Crumbs, Marinara on the side',
+        7.99,'Mozzarella Cheese, Bread Crumbs, Oil, Marinana Sauce', 'No', 'No', 'Yes', 'No',
+        'assets/images/meals_img/mozza_sticks.jpg');
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(03,'STARTER','Caprese Salad','Tomatoes, Buffalo Mozarella, and Fresh Basil drizzled in Olive Oil and Balsamic',
+        9.99,'Tomatoes, Mozarella, Basil, Olive Oil, and Balsamic Vinegar', 'Yes', 'No', 'Yes', 'Yes',
+        'assets/images/meals_img/caprese_salad.jpg');
 
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
