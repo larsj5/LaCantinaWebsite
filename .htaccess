@@ -6,3 +6,4 @@ php_flag display_errors on
 </Files>
 
 Options -Indexes
+

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'dropdown.html' %}
+{% endblock %}
+
+{% block content %}
+
+    <main class="cards">
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ meal.name }}</h3>
+            </div>
+            <div class="card-body">
+                <img src="{{ meal.image }}" class="img" alt="{{ meal.name }}">
+                <ul>
+                    <li>Type: {{ meal.type }}</li>
+                    <li>Price: {{ meal.price }}</li>
+                    <li>{{ meal.description }} </li>
+                    <li>Ingredients: {{ meal.ingredients }} </li>
+                    <li>Gluten Free: {{ meal.gluten_free }} </li>
+                    <li>Dairy Free: {{ meal.dairy_free }} </li>
+                    <li>Vegetarian: {{ meal.vegetarian }} </li>
+                    <li>Vegan: {{ meal.vegan }} </li>
+                </ul>
+                <a href="menu.php" class="btn">Back</a>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
