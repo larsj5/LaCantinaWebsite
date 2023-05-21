@@ -30,39 +30,39 @@ requests TEXT NOT NULL
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(01,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99,'../assets/images/meals_img/bruschetta.jpg');
+VALUES(01,'STARTER','Bruschetta','Cherry Tomatoes, Garlic, Basil and Pesto',5.99,'assets/images/meals_img/bruschetta.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(02,'STARTER','Mozarella in Carozza','Deep Fried Mozzarella with Bread Crumbs',7.99,'../assets/images/meals_img/mozza_sticks.jpg');
+VALUES(02,'STARTER','Mozarella in Carozza','Deep Fried Mozzarella with Bread Crumbs',7.99,'assets/images/meals_img/mozza_sticks.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(03,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99,'../assets/images/meals_img/caprese_salad.jpg');
+VALUES(03,'STARTER','Caprese Salad','Tomatoes and Buffalo Morarella',9.99,'assets/images/meals_img/caprese_salad.jpg');
 
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(10,'MAIN','Carbonara','Egg, Guanciale Amatriciano Sa.No. and Pecorino Romano Deroma Dop',12.99,'../assets/images/meals_img/carbonara.jpg');
+VALUES(10,'MAIN','Carbonara','Egg, Guanciale Amatriciano Sa.No. and Pecorino Romano Deroma Dop',12.99,'assets/images/meals_img/carbonara.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(11,'MAIN','Carpaccio','Marinated  raw Veal with Rocket and Parmigiano',16.99,'../assets/images/meals_img/carpaccio.jpg');
+VALUES(11,'MAIN','Carpaccio','Marinated  raw Veal with Rocket and Parmigiano',16.99,'assets/images/meals_img/carpaccio.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(12,'MAIN','Lasagna','Lasagne with bolognese sauce and french bechamel',14.99,'../assets/images/meals_img/lasagna.jpg');
+VALUES(12,'MAIN','Lasagna','Lasagne with bolognese sauce and french bechamel',14.99,'assets/images/meals_img/lasagna.jpg');
 
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(20,'DESSERT','Tiramisu','Typical coffee tiramisu',5.99,'../assets/images/meals_img/tiramisu.jpg');
+VALUES(20,'DESSERT','Tiramisu','Typical coffee tiramisu',5.99,'assets/images/meals_img/tiramisu.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(21,'DESSERT','Panna Cotta','with berries and strawberry topping',5.99,'../assets/images/meals_img/panna_cotta.jpg');
+VALUES(21,'DESSERT','Panna Cotta','with berries and strawberry topping',5.99,'assets/images/meals_img/panna_cotta.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(22,'DESSERT','Gelato','Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99,'../assets/images/meals_img/gelato.jpg');
+VALUES(22,'DESSERT','Gelato','Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99,'assets/images/meals_img/gelato.jpg');
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(30,'DRINK','Mineral Water','Evian, Levissima, San pelegrino',2.99,'../assets/images/meals_img/water.jpg');
+VALUES(30,'DRINK','Mineral Water','Evian, Levissima, San pelegrino',2.99,'assets/images/meals_img/water.jpg');
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
 VALUES(31,'DRINK','White Wine','Palatino (sweet white wine from Sicily)',4.99,'../assets/images/meals_img/white_wine.jpg');

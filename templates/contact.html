@@ -1,107 +1,74 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Contact Us Form</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="shortcut icon" href="../assets/images/favicon1.png" type="image/x-icon">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <header>
-            <div class="title-box">
-                <h1>La Cantina</h1>
-                <p>L'Italie n'a jamais été si proche !</p>
-            </div>
+{% extends "layout.html" %}
 
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img src="../assets/images/header2.jpeg"></div>
-                    <div class="slide"><img src="../assets/images/header1.jpeg"></div>
-                    <div class="slide"><img src="../assets/images/header4.jpeg"></div>
-                    <div class="slide"><img src="../assets/images/header3.jpeg"></div>
-                </div>
-            </div>
+{% block menu %}
+    {% include 'dropdown.html' %}
+{% endblock %}
 
-        </header>
+{% block content %}
 
-        {% block menu %}
-            {% include 'dropdown.html' %}
-        {% endblock %}
+<div class="page-title">
+    <h1>Contact Us</h1>
+</div>
 
-        <div class="page-title">
-            <h1>Contact Us</h1>
+<div class="contacts">
+<h2>
+    Telephone Number: +33 6 40 46 22 72<br>
+    Email: lacantina@gmail.com<br>
+    Contact Person: Valentin Bonnet<br>
+    Business Address: Rue des Champs Elysées, Paris, 75000 France <br>
+</h2>
+</div>
+
+<div class="contact-form">
+    <div class="form-title">
+        <h2>Send us a Message</h2>
+        <p>* required field</p><br>
         </div>
 
-        <div class="contacts">
-        <h2>
-            Telephone Number: +33 6 40 46 22 72<br>
-            Email: lacantina@gmail.com<br>
-            Contact Person: Valentin Bonnet<br>
-            Business Address: Rue des Champs Elysées, Paris, 75000 France <br>
-        </h2>
+    <div class="form-body">
+        <span class="validation">{{ validations.pagemessage }}</span>
+        <form id="contact" method="POST" action="../contact.php">   
+        <div class="row">
+            <div class="col-25">                                     
+                <label for="type">Please select query type *</label>
+            </div>
+            <div class="col-75">
+                <select id="type" name="type">
+                    <option value="complaint">Complaint</option>
+                    <option value="information">Information about Restaurant</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>                 
+            <span class="validation">{{ validations.typeError }}</span>
         </div>
-
-        <div class="contact-form">
-            <div class="form-title">
-                <h2>Send us a Message</h2>
-                <p>* required field</p><br>
-                </div>
-
-            <div class="form-body">
-                <span class="validation">{{ validations.pagemessage }}</span>
-                <form id="contact" method="POST" action="../contact.php">   
-                <div class="row">
-                    <div class="col-25">                                     
-                        <label for="type">Please select query type *</label>
-                    </div>
-                    <div class="col-75">
-                        <select id="type" name="type">
-                          <option value="complaint">Complaint</option>
-                          <option value="information">Information about Restaurant</option>
-                          <option value="other">Other</option>
-                        </select>
-                    </div>                 
-                    <span class="validation">{{ validations.typeError }}</span>
-                </div>
-                <div class="row">
-                    <div class="col-25">                                     
-                        <label for="email">Please enter your email address *</label>
-                    </div>
-                    <div class="col-75">
-                        <input placeholder="your@email.com" type="email" name="email" id="email" required value="">
-                        <span class="validation">{{ validations.emailErr }}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-25">                                        
-                        <label for="message">Your message *</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea maxlength="150" required id="message" name="message" placeholder="Write something.."></textarea>
-                        <span class="validation">{{ validations.messageErr }}</span>
-                    </div>  
-                </div>    
-                <div class="row">
-                    <input type="submit" value="Submit">
-                </div>                    
-            </form>
-            <br>
-            <a href="templates/layout.html" class="btn">Go back to the home page</a>
+        <div class="row">
+            <div class="col-25">                                     
+                <label for="email">Please enter your email address *</label>
+            </div>
+            <div class="col-75">
+                <input placeholder="your@email.com" type="email" name="email" id="email" required value="">
+                <span class="validation">{{ validations.emailErr }}</span>
             </div>
         </div>
+        <div class="row">
+            <div class="col-25">                                        
+                <label for="message">Your message *</label>
+            </div>
+            <div class="col-75">
+                <textarea maxlength="150" required id="message" name="message" placeholder="Write something.."></textarea>
+                <span class="validation">{{ validations.messageErr }}</span>
+            </div>  
+        </div>    
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>                    
+    </form>
+    <br>
+    <a href="main.php" class="btn">Go back to the home page</a>
+    </div>
+</div>
 
-        
 
-        <script src="" async defer></script>
-    </body>
-</html>
+
+<script src="" async defer></script>
+{% endblock %}

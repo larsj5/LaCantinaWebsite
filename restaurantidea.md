@@ -14,11 +14,11 @@ php -S localhost:8000
 * -> And have a way to favorite the item
 
 FROM PROFESSOR:
-* -> All of our paths for css and images are currently messed up because we are accessing from the php page not the html
+* -> All of our paths for css and images are currently messed up because we are accessing from the php page not the html [DONE]
 * -> Need to block access to the templates folder with .htaccess
-* -> Need to create a seperate layout for main page and for other pages, and extend that layout
-* -> Need to have an index.php for the home page (can just render the page)
-* -> Scrap the original menu altogether and go with the menu2.php
+* -> Need to create a seperate layout for main page and for other pages, and extend that layout [DONE]
+* -> Need to have an index.php for the home page (can just render the page) [DONE]
+* -> Scrap the original menu altogether and go with the menu2.php [DONE]
 * -> All of the photos are way too big and need to be compressed to 50 kb or smaller
 
 

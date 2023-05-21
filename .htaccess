@@ -7,9 +7,3 @@ php_flag display_errors on
 
 Options -Indexes
 
-
-## CACHE-CONTROL - only if mod_headers is enabled in httpd.conf (more granular control) ##
-<IfModule mod_headers.c>
-    <FilesMatch "\.(gif|ico|jpeg|jpg|png||otf|eot|svg|ttf|woff)$">
-    Header set Cache-Control "max-age=2592000, public"
-</FilesMatch>
