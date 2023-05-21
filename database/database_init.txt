@@ -51,7 +51,7 @@ INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
                     gluten_free,dairy_free,vegetarian,vegan,img_path)
 VALUES(10,'MAIN','Carbonara', 'A Delicous and Creamy Pasta Dish', 12.99,
         'Egg, Guanciale Amatriciano Sa.No., Bacon, Parmesan Cheese, Garlic, and Pecorino Romano Deroma Dop',
-        'No', 'No', 'No', 'No',assets/images/meals_img/carbonara.jpg');
+        'No', 'No', 'No', 'No', 'assets/images/meals_img/carbonara.jpg');
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
@@ -76,7 +76,7 @@ INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
                     gluten_free,dairy_free,vegetarian,vegan,img_path)
 VALUES(21,'DESSERT','Panna Cotta','Cooked Cream with Fresh Strawberries and a Strawberry Couli',5.99,
         'Milk, Heavy Cream, Sugar, Strawberries', 
-        'Yes', No', 'Yes', 'No', 'assets/images/meals_img/panna_cotta.jpg');
+        'Yes', 'No', 'Yes', 'No', 'assets/images/meals_img/panna_cotta.jpg');
 
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
                     gluten_free,dairy_free,vegetarian,vegan,img_path)
