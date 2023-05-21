@@ -17,8 +17,14 @@ if(isset($_GET['a']))
                 'type'              => $result[0]['type_meal'],
                 'image'             => $result[0]['img_path'],
                 'name'              => $result[0]['name_meal'],
-                'description'       => $result[0]['description']
-                
+                'description'       => $result[0]['description'],
+                'price'             => $result[0]['price'],
+                'ingredients'       => $result[0]['ingredients'],
+                'gluten_free'       => $result[0]['gluten_free'],
+                'dairy_free'        => $result[0]['dairy_free'],
+                'vegetarian'        => $result[0]['vegetarian'],
+                'vegan'             => $result[0]['vegan'],
+                'gluten_free'       => $result[0]['gluten_free']    
         ];
         // Render view
         echo $twig->render('details.html', ['meal' => $meal]);

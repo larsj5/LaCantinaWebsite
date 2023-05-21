@@ -31,50 +31,74 @@ requests TEXT NOT NULL
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
                     gluten_free,dairy_free,vegetarian,vegan,img_path)
 VALUES(01,'STARTER','Bruschetta','The classic Italian Appetizer, made with Fresh Homemade Bread', 
-        5.99,'Cherry Tomatoes, Garlic, Bread, Basil and Pesto','No', 'Yes', 'Yes', 'Yes',
-        'assets/images/meals_img/bruschetta.jpg');
+        5.99,'Cherry Tomatoes, Garlic, Bread, Basil and Pesto',
+        'No', 'Yes', 'Yes', 'Yes','assets/images/meals_img/bruschetta.jpg');
 
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
                     gluten_free,dairy_free,vegetarian,vegan,img_path)
 VALUES(02,'STARTER','Mozarella in Carozza','Deep Fried Mozzarella with Bread Crumbs, Marinara on the side',
-        7.99,'Mozzarella Cheese, Bread Crumbs, Oil, Marinana Sauce', 'No', 'No', 'Yes', 'No',
-        'assets/images/meals_img/mozza_sticks.jpg');
+        7.99,'Mozzarella Cheese, Bread Crumbs, Oil, Marinana Sauce',
+        'No', 'No', 'Yes', 'No','assets/images/meals_img/mozza_sticks.jpg');
 
 INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
                     gluten_free,dairy_free,vegetarian,vegan,img_path)
 VALUES(03,'STARTER','Caprese Salad','Tomatoes, Buffalo Mozarella, and Fresh Basil drizzled in Olive Oil and Balsamic',
-        9.99,'Tomatoes, Mozarella, Basil, Olive Oil, and Balsamic Vinegar', 'Yes', 'No', 'Yes', 'Yes',
-        'assets/images/meals_img/caprese_salad.jpg');
+        9.99,'Tomatoes, Mozarella, Basil, Olive Oil, and Balsamic Vinegar',
+        'Yes', 'No', 'Yes', 'Yes','assets/images/meals_img/caprese_salad.jpg');
 
 
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(10,'MAIN','Carbonara','Egg, Guanciale Amatriciano Sa.No. and Pecorino Romano Deroma Dop',12.99,'assets/images/meals_img/carbonara.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(11,'MAIN','Carpaccio','Marinated  raw Veal with Rocket and Parmigiano',16.99,'assets/images/meals_img/carpaccio.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(12,'MAIN','Lasagna','Lasagne with bolognese sauce and french bechamel',14.99,'assets/images/meals_img/lasagna.jpg');
-
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(10,'MAIN','Carbonara', 'A Delicous and Creamy Pasta Dish', 12.99,
+        'Egg, Guanciale Amatriciano Sa.No., Bacon, Parmesan Cheese, Garlic, and Pecorino Romano Deroma Dop',
+        'No', 'No', 'No', 'No',assets/images/meals_img/carbonara.jpg');
 
 INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
                     gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(20,'DESSERT','Tiramisu','Typical coffee tiramisu',5.99,'assets/images/meals_img/tiramisu.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(21,'DESSERT','Panna Cotta','with berries and strawberry topping',5.99,'assets/images/meals_img/panna_cotta.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(22,'DESSERT','Gelato','Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99,'assets/images/meals_img/gelato.jpg');
+VALUES(11,'MAIN','Carpaccio','Marinated Raw Veal with Rocket and Parmigiano',16.99,
+        'Raw Veal, Arugula, Parmesan cheese, and Olive Oil',
+        'Yes', 'No', 'No', 'No','assets/images/meals_img/carpaccio.jpg');
 
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(30,'DRINK','Mineral Water','Evian, Levissima, San pelegrino',2.99,'assets/images/meals_img/water.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(31,'DRINK','White Wine','Palatino (sweet white wine from Sicily)',4.99,'../assets/images/meals_img/white_wine.jpg');
-INSERT INTO Meals(meal_id,type_meal,name_meal, description,price,ingredients,
-                    gluten_free, dairy_free, vegetarian, vegan, img_path)
-VALUES(32,'DRINK','Red Wine','Fenici (from Bordeaux)',4.99,'../assets/images/meals_img/red_wine.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(12,'MAIN','Lasagna','Lasagna with Bolognese Sauce and French Bechamel',14.99,
+        'Beef, Tomato Sauce, Basil, Garlic, Pasta, Bechamel, and Cheeses',
+        'No', 'No', 'No', 'No', 'assets/images/meals_img/lasagna.jpg');
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(20,'DESSERT','Tiramisu','Typical Coffee Tiramisu',5.99,
+        'Ladyfinger Cookies, Coffee, Mascarpone, Eggs, Marsala Rum, Cocoa Powder', 
+        'No', 'No', 'Yes', 'No', 'assets/images/meals_img/tiramisu.jpg');
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(21,'DESSERT','Panna Cotta','Cooked Cream with Fresh Strawberries and a Strawberry Couli',5.99,
+        'Milk, Heavy Cream, Sugar, Strawberries', 
+        'Yes', No', 'Yes', 'No', 'assets/images/meals_img/panna_cotta.jpg');
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(22,'DESSERT','Gelato','Homemade Gelato! Available flavors : Chocolate, Vanilla, Strawberry, Mint',4.99,
+        'Milk, Sugar, Eggs, Various Flavorings', 'Yes', 'No', 'Yes', 'No',
+        'assets/images/meals_img/gelato.jpg');
+
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(30,'DRINK','Mineral Water','Brands: Evian, Levissima, San Pelegrino',2.99,
+        'Water, Carbonation', 'Yes', 'Yes', 'Yes', 'Yes',
+        'assets/images/meals_img/water.jpg');
+
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(31,'DRINK','White Wine','Palatino (A Sweet White Wine from Sicily)',4.99,
+        'Grapes, Yeast, Sulfites', 'Yes', 'Yes', 'Yes', 'Yes',
+        'assets/images/meals_img/white_wine.jpg');
+INSERT INTO Meals(meal_id,type_meal,name_meal,description,price,ingredients,
+                    gluten_free,dairy_free,vegetarian,vegan,img_path)
+VALUES(32,'DRINK','Red Wine','Fenici (from Bordeaux)',4.99,
+        'Grapes, Yeast, Sulfites', 'Yes', 'Yes', 'Yes', 'Yes',
+        'assets/images/meals_img/red_wine.jpg');
 
