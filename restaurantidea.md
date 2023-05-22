@@ -10,11 +10,13 @@ php -S localhost:8000
 * We need to have individual pages with further details for each menu item [DONE]
 * -> Need to add more to each menu item for the details page (ingredients, gluten free, vegan, etc.) [DONE]
 * -> And have a way to favorite the item
-* Need a custom 404 page
+* Need a custom 404 page [DONE]
+* Need to be able to send the favorites list to an email
+* Need to write the documentation
 
 FROM PROFESSOR:
 * -> All of our paths for css and images are currently messed up because we are accessing from the php page not the html [DONE]
-* -> Need to block access to the templates folder with .htaccess
+* -> Need to block access to the templates folder with .htaccess [DONE]
 * -> Need to create a seperate layout for main page and for other pages, and extend that layout [DONE]
 * -> Need to have an index.php for the home page (can just render the page) [DONE]
 * -> Scrap the original menu altogether and go with the menu2.php [DONE]
