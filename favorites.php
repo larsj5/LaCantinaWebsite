@@ -23,6 +23,12 @@
     <input type="password" id="password" name="password" required><br><br>
     <input type="submit" value="Login">
   </form>
+
+  <form action="ajouter_aux_favoris.php" method="post">
+  <input type="hidden" name="dishId" value="ID_DU_PLAT">
+  <button id="favorite-button">Ajouter aux favoris</button>
+  </form>
+
   <?php
   // Database configuration
   $servername = "127.0.0.1";
