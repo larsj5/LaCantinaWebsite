@@ -7,5 +7,6 @@ php_flag display_errors on
 
 ErrorDocument 404 /cantina/custom404.php
 
+# Disable directory browsing
 Options -Indexes
 
