@@ -19,5 +19,3 @@ FROM PROFESSOR:
 * -> Need to have an index.php for the home page (can just render the page) [DONE]
 * -> Scrap the original menu altogether and go with the menu2.php [DONE]
 * -> All of the photos are way too big and need to be compressed to 50 kb or smaller
-
-
