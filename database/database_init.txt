@@ -111,7 +111,7 @@ CREATE TABLE users (
 CREATE TABLE meal_fav (
         user_ID INT NOT NULL,
         meal_ID INT NOT NULL,
-        CONSTRAINT user_ID1 FORGAIN KEY (user_ID) REFERENCES users(id),
-        CONSTRAINT meal_ID1 FORGAIN KEY (meal_ID) REFERENCES Meals(meal_id)
+        CONSTRAINT user_ID1 FOREIGN KEY (user_ID) REFERENCES users(id),
+        CONSTRAINT meal_ID1 FOREIGN KEY (meal_ID) REFERENCES Meals(meal_id)
 
 );
