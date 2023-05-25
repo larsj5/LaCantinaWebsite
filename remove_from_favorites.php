@@ -26,11 +26,11 @@ if (isset($_SESSION['username'])) {
             // L'utilisateur existe, ajoutez l'ID du plat à ses favoris
             $userId = $user[0]['id'];
 
-            // Make sure that it doesn't already exist
-            if (!($db->select("SELECT * FROM meal_fav WHERE user_id ='$userId' AND meal_id ='$mealId'"))) {
-                $db->query("INSERT INTO meal_fav(user_id,meal_id) VALUES ('$userId','$mealId')");
+            // Make sure that it exists
+            if ($db->select("SELECT * FROM meal_fav WHERE user_id ='$userId' AND meal_id ='$mealId'")) {
+                $db->query("DELETE FROM meal_fav WHERE user_id ='$userId' AND meal_id ='$mealId'");
             }
-            header("Location: menu.php");
+            header("Location: favorites.php");
     
         } else {
             
