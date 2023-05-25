@@ -548,3 +548,17 @@ input[type=text], input[type="email"], select, textarea, input[type="number"], i
       width: 80%;
     }
   }
+
+  .favorite-button {
+    background-color: #FFD700;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .favorite-button:hover {
+    background-color: #FFC500;
+  }
+  

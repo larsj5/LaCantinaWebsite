@@ -102,3 +102,16 @@ VALUES(32,'DRINK','Red Wine','Fenici (from Bordeaux)',4.99,
         'Grapes, Yeast, Sulfites', 'Yes', 'Yes', 'Yes', 'Yes',
         'assets/images/meals_img/red_wine.jpg');
 
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE meal_fav (
+        user_ID INT NOT NULL,
+        meal_ID INT NOT NULL,
+        CONSTRAINT user_ID1 FORGAIN KEY (user_ID) REFERENCES users(id),
+        CONSTRAINT meal_ID1 FORGAIN KEY (meal_ID) REFERENCES Meals(meal_id)
+
+);
