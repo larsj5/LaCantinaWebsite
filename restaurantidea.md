@@ -22,4 +22,5 @@ FROM PROFESSOR:
 * -> Scrap the original menu altogether and go with the menu2.php [DONE]
 * -> All of the photos are way too big and need to be compressed to 50 kb or smaller
 
+for the email, just format the html page and send it as an email, and all we need is to have a list of the meal names. 
 
