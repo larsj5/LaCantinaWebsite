@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'dropdown.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="page-title">
+        <h1>Favorites</h1>
+    </div>
+
+    <div class="welcome-message">
+        {{ welcome_message | raw }}
+    </div>
+
+    <div class="login-link">
+        {{ login_link | raw }}
+    </div>
+
+    <main class="cards">
+        {% for dish in favorites %}
+            <div class="card">
+                <div class="card-header">
+                    <h3>{{ dish.name_meal }} ({{ dish.type_meal }})</h3>
+                </div>
+                <div class="card-body">
+                    <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name }}">
+                    <p>{{ dish.price }}</p>
+                    <p>{{ dish.description }}</p>
+                    <form action="remove_from_favorites.php" method="post">
+                        <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                        <button type="submit" class="favorite-button">Remove from Favorites</button>
+                      </form>                      
+                    <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+
+
+{% endblock %}

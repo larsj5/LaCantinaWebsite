@@ -16,10 +16,11 @@ php -S localhost:8000
 
 FROM PROFESSOR:
 * -> All of our paths for css and images are currently messed up because we are accessing from the php page not the html [DONE]
-* -> Need to block access to the templates folder with .htaccess [LARS]
+* -> Need to block access to the templates folder with .htaccess [DONE]
 * -> Need to create a seperate layout for main page and for other pages, and extend that layout [DONE]
 * -> Need to have an index.php for the home page (can just render the page) [DONE]
 * -> Scrap the original menu altogether and go with the menu2.php [DONE]
 * -> All of the photos are way too big and need to be compressed to 50 kb or smaller
 
+for the email, just format the html page and send it as an email, and all we need is to have a list of the meal names. 
 
