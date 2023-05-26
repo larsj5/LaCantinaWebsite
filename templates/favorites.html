@@ -19,21 +19,28 @@
 
     <main class="cards">
         {% for dish in favorites %}
-            <div class="card">
-                <div class="card-header">
-                    <h3>{{ dish.name_meal }} ({{ dish.type_meal }})</h3>
-                </div>
-                <div class="card-body">
-                    <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name }}">
-                    <p>{{ dish.price }}</p>
-                    <p>{{ dish.description }}</p>
-                    <form action="remove_from_favorites.php" method="post">
-                        <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
-                        <button type="submit" class="favorite-button">Remove from Favorites</button>
-                      </form>                      
-                    <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
-                </div>
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ dish.name_meal }}</h3>
             </div>
+            <div class="card-body">
+                <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name_meal }}">
+                <ul>
+                    <li>Type: {{ dish.type }}</li>
+                    <li>Price: {{ dish.price }}</li>
+                    <li>{{ dish.description }} </li>
+                    <li>Ingredients: {{ dish.ingredients }} </li>
+                    <li>Gluten Free: {{ dish.gluten_free }} </li>
+                    <li>Dairy Free: {{ dish.dairy_free }} </li>
+                    <li>Vegetarian: {{ dish.vegetarian }} </li>
+                    <li>Vegan: {{ dish.vegan }} </li>
+                </ul>
+                <form action="remove_from_favorites.php" method="post">
+                    <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                    <button type="submit" class="favorite-button">Remove from Favorites</button>
+                  </form>                      
+            </div>
+        </div>
         {% endfor %}
     </main>
 

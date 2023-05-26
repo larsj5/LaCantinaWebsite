@@ -23,6 +23,10 @@
                     <li>Vegetarian: {{ meal.vegetarian }} </li>
                     <li>Vegan: {{ meal.vegan }} </li>
                 </ul>
+                <form action="add_to_favorites.php" method="post">
+                    <input type="hidden" name="mealId" value="{{ meal.meal_id }}">
+                    <button type="submit" class="favorite-button">Add to favorite</button>
+                  </form>                      
                 <a href="menu.php" class="btn">Back</a>
             </div>
         </div>

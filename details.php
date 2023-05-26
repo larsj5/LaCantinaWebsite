@@ -14,6 +14,7 @@ if(isset($_GET['a']))
     if (count($result) > 0){
         // Meal loaded from store
         $meal = [
+                'meal_id'           => $result[0]['meal_id'],
                 'type'              => $result[0]['type_meal'],
                 'image'             => $result[0]['img_path'],
                 'name'              => $result[0]['name_meal'],
