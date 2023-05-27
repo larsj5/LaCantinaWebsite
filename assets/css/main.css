@@ -36,7 +36,7 @@ header p {
 }
 
  div.title-box h1,header p,li {
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
  }
 
  
@@ -63,7 +63,7 @@ header p {
     display: block;
     padding: 10px;
     text-decoration: none;
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     font-size: 50px;
     color: white;
     text-align: center;
@@ -87,7 +87,7 @@ nav.options ul li:hover{
 div.address, div.about, div.hours{
     display: flex;
     flex-direction: column;
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     color: white;
     text-decoration: none;
     justify-content: center;
@@ -306,7 +306,7 @@ footer p {
 
 /* Contact Us Form */
 .page-title {
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     font-size: 40px;
     color: white;
     text-decoration: none;
@@ -316,7 +316,7 @@ footer p {
 }
 
 .contacts {
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     color: white;
     text-decoration: none;
     justify-content: center;
