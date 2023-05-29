@@ -27,6 +27,17 @@ if (isset($_SESSION['username'])) {
             $userId = $user[0]['id'];
 
             $db->query("INSERT INTO meal_fav(user_id,meal_id) VALUES ('$userId','$mealId')");
+
+            ini_set( 'display_errors', 1 );
+            error_reporting( E_ALL );
+            $from = "lacantina@gmail.com";
+            $to = "valentinbonnet79@gmail.com";
+            $subject = "Essai de PHP Mail";
+            $message = "PHP Mail fonctionne parfaitement";
+            $headers = "De :" . $from;
+            mail($to,$subject,$message, $headers);
+            echo "L'email a été envoyé.";
+
             header("Location: menu.php");
             
 
