@@ -7,7 +7,7 @@ html {
 }
 
 body { 
-    background-color: #fcd483;
+    background-image: url("../images/background.jpg");
 }
 
 header {
@@ -15,6 +15,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffeac1;
 }
 
 div.title-box {
@@ -36,7 +37,7 @@ header p {
 }
 
  div.title-box h1,header p,li {
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
  }
 
  
@@ -63,7 +64,7 @@ header p {
     display: block;
     padding: 10px;
     text-decoration: none;
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     font-size: 50px;
     color: white;
     text-align: center;
@@ -87,7 +88,7 @@ nav.options ul li:hover{
 div.address, div.about, div.hours{
     display: flex;
     flex-direction: column;
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     color: white;
     text-decoration: none;
     justify-content: center;
@@ -169,6 +170,8 @@ nav.menu ul li a {
 .nav-item {
     flex: 1;
     height: 300px;
+    background-color: #000000;
+    color:white;
 }
 
 
@@ -306,7 +309,7 @@ footer p {
 
 /* Contact Us Form */
 .page-title {
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     font-size: 40px;
     color: white;
     text-decoration: none;
@@ -316,14 +319,14 @@ footer p {
 }
 
 .contacts {
-    font-family: 'Kenia', cursive;
+    font-family: 'Kenia', serif;
     color: white;
     text-decoration: none;
     justify-content: center;
     text-align: center;
 }
 
-.contact-form, .reservations-form {
+.contact-form, .reservations-form, .send_favorites {
     border-radius: 25px;
     margin: 50px;
     padding: 15px;
@@ -417,15 +420,29 @@ input[type=text], input[type="email"], select, textarea, input[type="number"], i
   /* Dropdown Menu */
 
   ul.dropdown {
-    margin: 20px;
+    margin: 0px;
     list-style-type: none;
     padding: 10px;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:9999;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   }
   
   ul.dropdown li {
     float: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  ul.dropdown li.right{
+    float: right;
+    transform: scale(1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   
   li a, .dropbtn {

@@ -14,7 +14,7 @@ if (isset($_SESSION['username'])) {
     $twig->addGlobal('welcome_message', 'Welcome, ' . $username . ' !');
 } else {
     // Définissez une variable globale avec le lien de connexion
-    $twig->addGlobal('login_link', 'Please <a href="login.php">login</a> to use add favorite dishes.');
+    $twig->addGlobal('login_link', '<a href="login.php">Login</a>.');
 }
 
 // Load from the DB
@@ -22,6 +22,7 @@ $db = new Db();
 $menu = $db->select("SELECT * FROM MEALS");
 
 echo $twig->render('menu.html', ['menu' => $menu]);
+
 ?>
 
 

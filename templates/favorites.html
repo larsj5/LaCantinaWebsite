@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'dropdown.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="page-title">
+        <h1>Favorites</h1>
+    </div>
+
+    <main class="cards">
+        {% for dish in favorites %}
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ dish.name_meal }}</h3>
+            </div>
+            <div class="card-body">
+                <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name_meal }}">
+                <ul>
+                    <li>Type: {{ dish.type }}</li>
+                    <li>Price: {{ dish.price }}</li>
+                    <li>{{ dish.description }} </li>
+                    <li>Ingredients: {{ dish.ingredients }} </li>
+                    <li>Gluten Free: {{ dish.gluten_free }} </li>
+                    <li>Dairy Free: {{ dish.dairy_free }} </li>
+                    <li>Vegetarian: {{ dish.vegetarian }} </li>
+                    <li>Vegan: {{ dish.vegan }} </li>
+                </ul>
+                <form action="remove_from_favorites.php" method="post">
+                    <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                    <button type="submit" class="favorite-button">Remove from Favorites</button>
+                  </form>                      
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+
+    <div class="send_favorites">
+        <div class="form-title">
+            <h2>Send your Favorites via Email</h2>
+            <p>* required field</p><br>
+        </div>
+    
+        <div class="form-body">
+            <form action="send_email.php" method="post">
+                <div class="row">
+                    <div class="col-25">                                     
+                        <label for="email">Please enter your email address *</label>
+                    </div>
+                    <div class="col-75">
+                        <input placeholder="your@email.com" type="email" name="email" id="email" required value="">
+                    </div>
+                </div>
+                <button type="submit" class="favorite-button">Send Favorites</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

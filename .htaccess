@@ -3,7 +3,10 @@ php_flag display_errors on
 
 <Files "config.ini">
     Require all denied
-</Files>
+</Files>    
 
+ErrorDocument 404 /cantina/custom404.php
+
+# Disable directory browsing
 Options -Indexes
 
