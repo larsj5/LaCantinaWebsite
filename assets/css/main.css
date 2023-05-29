@@ -417,11 +417,17 @@ input[type=text], input[type="email"], select, textarea, input[type="number"], i
   /* Dropdown Menu */
 
   ul.dropdown {
-    margin: 20px;
+    margin: 0px;
     list-style-type: none;
     padding: 10px;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:9999;
+
   }
   
   ul.dropdown li {
