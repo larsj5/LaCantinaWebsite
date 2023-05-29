@@ -36,5 +36,26 @@
         {% endfor %}
     </main>
 
+    <div class="send_favorites">
+        <div class="form-title">
+            <h2>Send your Favorites via Email</h2>
+            <p>* required field</p><br>
+        </div>
+    
+        <div class="form-body">
+            <form action="send_email.php" method="post">
+                <div class="row">
+                    <div class="col-25">                                     
+                        <label for="email">Please enter your email address *</label>
+                    </div>
+                    <div class="col-75">
+                        <input placeholder="your@email.com" type="email" name="email" id="email" required value="">
+                    </div>
+                </div>
+                <button type="submit" class="favorite-button">Send Favorites</button>
+            </form>
+        </div>
+    </div>
+
 
 {% endblock %}
