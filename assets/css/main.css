@@ -323,7 +323,7 @@ footer p {
     text-align: center;
 }
 
-.contact-form, .reservations-form {
+.contact-form, .reservations-form, .send_favorites {
     border-radius: 25px;
     margin: 50px;
     padding: 15px;
