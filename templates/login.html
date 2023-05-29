@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'dropdown.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="page-title">
+    <h1>Login</h1>
+</div>
+
+<div class="registration">
+    <h1>Registration</h1>
+    <span class="validation">{{ validations.register }}</span>
+    <form action="login.php" method="post">
+      <input type="hidden" name="action" value="register">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <input type="submit" value="Register">
+    </form>
+    <span class="validation">{{ validations.typeError }}</span>
+</div>
+
+<div class="login"></div>
+    <h1>Login</h1>
+    <span class="validation">{{ validations.login }}</span>
+    <form action="login.php" method="post">
+      <input type="hidden" name="action" value="login">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <input type="submit" value="Login">
+    </form>
+    <span class="validation">{{ validations.typeError }}</span>
+</div>
+
+{% endblock %}
