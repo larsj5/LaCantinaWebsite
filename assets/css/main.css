@@ -427,11 +427,19 @@ input[type=text], input[type="email"], select, textarea, input[type="number"], i
     left: 0;
     width: 100%;
     z-index:9999;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
   }
   
   ul.dropdown li {
     float: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  ul.dropdown li.right{
+    float: right;
+    transform: scale(1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   
   li a, .dropbtn {
