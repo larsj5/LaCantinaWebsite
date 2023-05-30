@@ -6,14 +6,15 @@
 
 {% block content %}
     <div class="page-title">
-        <h1>Menu</h1>
+        <h1>~ Menu ~</h1>
     </div>
-
+    {% for dish in menu %}
+    {% if dish.type_meal == 'STARTER' %}
     <main class="cards">
-        {% for dish in menu %}
             <div class="card">
+                
                 <div class="card-header">
-                    <h3>{{ dish.name_meal }} ({{ dish.type_meal }})</h3>
+                    <h3>{{ dish.name_meal }} </h3>
                 </div>
                 <div class="card-body">
                     <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name_meal }}">
@@ -26,6 +27,76 @@
                     <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
                 </div>
             </div>
+            {% endif %}
+        {% endfor %}
+    </main>
+
+    {% for dish in menu %}
+    {% if dish.type_meal == 'MAIN' %}
+    <main class="cards">
+            <div class="card">
+                
+                <div class="card-header">
+                    <h3>{{ dish.name_meal }} </h3>
+                </div>
+                <div class="card-body">
+                    <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name_meal }}">
+                    <p>{{ dish.price }}</p>
+                    <p>{{ dish.description }}</p>
+                    <form action="add_to_favorites.php" method="post">
+                        <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                        <button type="submit" class="favorite-button">Add to favorite</button>
+                      </form>                      
+                    <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </main>
+
+    {% for dish in menu %}
+    {% if dish.type_meal == 'DESSERT' %}
+    <main class="cards">
+            <div class="card">
+                
+                <div class="card-header">
+                    <h3>{{ dish.name_meal }} </h3>
+                </div>
+                <div class="card-body">
+                    <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name_meal }}">
+                    <p>{{ dish.price }}</p>
+                    <p>{{ dish.description }}</p>
+                    <form action="add_to_favorites.php" method="post">
+                        <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                        <button type="submit" class="favorite-button">Add to favorite</button>
+                      </form>                      
+                    <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </main>
+
+    {% for dish in menu %}
+    {% if dish.type_meal == 'DRINK' %}
+    <main class="cards">
+            <div class="card">
+                
+                <div class="card-header">
+                    <h3>{{ dish.name_meal }} </h3>
+                </div>
+                <div class="card-body">
+                    <img src="{{ dish.img_path }}" class="img" alt="{{ dish.name_meal }}">
+                    <p>{{ dish.price }}</p>
+                    <p>{{ dish.description }}</p>
+                    <form action="add_to_favorites.php" method="post">
+                        <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                        <button type="submit" class="favorite-button">Add to favorite</button>
+                      </form>                      
+                    <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
+                </div>
+            </div>
+            {% endif %}
         {% endfor %}
     </main>
 

@@ -40,6 +40,13 @@ header p {
     font-family: 'Kenia', serif;
  }
 
+ h2.name{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  font-size: larger;
+  text-align: center;
+ }
+
  
 
 /* main page options menu */
