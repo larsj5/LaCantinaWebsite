@@ -357,7 +357,7 @@ footer p {
     color: red;
   }
 
-input[type=text], input[type="email"], select, textarea, input[type="number"], input[type="date"] {
+input[type=text], input[type="email"], select, textarea, input[type="number"], input[type="date"], input[type="password"] {
     width: 90%;
     padding: 12px;
     border: 1px solid #ccc;
