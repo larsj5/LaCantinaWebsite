@@ -30,15 +30,17 @@
           $result = $conn->query($query);
 
           if ($result->num_rows > 0) {
-            $validations['register'] = "This user is already registered";       
-          } else {
-              // Inserting the new user into the database
-              $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-              if ($conn->query($query) === TRUE) {
-                $validations['register'] = "Registration successful!";
-              } else {
-                $validations['register'] = "Error during registration: " . $conn->error;
-              }
+    $validations['register'] = "This user is already registered";       
+} else {
+    // Inserting the new user into the database
+    $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    if ($conn->query($query) === TRUE) {
+        $validations['register'] = "Registration successful!";
+    } else {
+        $validations['register'] = "Error during registration: " . $conn->error;
+    }
+
+
 
           }
       } elseif ($action === 'login') {

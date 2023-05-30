@@ -21,6 +21,7 @@
                     <p>{{ dish.description }}</p>
                     <form action="add_to_favorites.php" method="post">
                         <input type="hidden" name="mealId" value="{{ dish.meal_id }}">
+                        <br>
                         <button type="submit" class="favorite-button">Add to favorite</button>
                       </form>                      
                     <a href="details.php?a={{ dish.meal_id }}" class="btn">Read more</a>
