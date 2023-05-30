@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    {% include 'dropdown.html' %}
+{% endblock %}
+
+{% block content %}
+
+<div class="contact-form">
+    <div class="form-title">
+        <h2>Register</h2>
+        </div>
+
+        <div class="form-body">
+            <span class="validation">{{ validations.register }}</span>
+            <form id="contact" method="post" action="login.php">   
+                <div class="row">
+                    <div class="col-25">
+                        <input type="hidden" name="action" value="register">                                     
+                        <label for="username">Username:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="username" name="username" required><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">                                     
+                        <label for="password">Password:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="password" name="password" required><br><br>
+                    </div>                 
+                </div>
+                <span class="validation">{{ validations.typeError }}</span>
+                <div class="row">
+                    <input type="submit" value="Register">
+                </div>                    
+            </form>
+            <br>
+            
+        </div>
+
+        <div class="form-title">
+            <h2>Login</h2>
+            </div>
+        
+        <div class="form-body">
+            <span class="validation">{{ validations.login }}</span>
+            <form id="contact" method="post" action="login.php">   
+                <div class="row">
+                    <div class="col-25">
+                        <input type="hidden" name="action" value="login">                                     
+                        <label for="username">Username:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="username" name="username" required><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">                                     
+                        <label for="password">Password:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="password" name="password" required><br><br>
+                    </div>                 
+                </div>
+                <span class="validation">{{ validations.typeError }}</span>
+                <div class="row">
+                    <input type="submit" value="Login">
+                </div>                    
+            </form>
+            <br>
+            <a href="main.php" class="btn1">Go back to the home page</a>
+
+        </div>
+
+
+
+{% endblock %}

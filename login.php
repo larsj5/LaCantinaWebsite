@@ -1,30 +1,7 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-  <title>Restaurant - Registration/Login</title>
-</head>
-<body>
-  <h1>Registration</h1>
-  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-    <input type="hidden" name="action" value="register">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <input type="submit" value="Register">
-  </form>
-  <h1>Login</h1>
-  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-    <input type="hidden" name="action" value="login">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <input type="submit" value="Login">
-  </form>
-
   <?php
+    require_once __DIR__.'/bootstrap.php';
+    require_once __DIR__.'/database.php';
+
   // Database configuration
   $servername = "127.0.0.1";
   $username = "root";
@@ -53,15 +30,18 @@
           $result = $conn->query($query);
 
           if ($result->num_rows > 0) {
-              echo "This user already exists.";
-          } else {
-              // Inserting the new user into the database
-              $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-              if ($conn->query($query) === TRUE) {
-                  echo "Registration successful!";
-              } else {
-                  echo "Error during registration: " . $conn->error;
-              }
+    $validations['register'] = "This user is already registered";       
+} else {
+    // Inserting the new user into the database
+    $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    if ($conn->query($query) === TRUE) {
+        $validations['register'] = "Registration successful!";
+    } else {
+        $validations['register'] = "Error during registration: " . $conn->error;
+    }
+
+
+
           }
       } elseif ($action === 'login') {
           // Login
@@ -73,7 +53,7 @@
           $result = $conn->query($query);
 
           if ($result->num_rows > 0) {
-              echo "Login successful!";
+            $validations['login'] = "Login successful!";
               session_start();
               header("Location: menu.php");
 
@@ -82,11 +62,16 @@
 
 
           } else {
-              echo "Incorrect username or password.";
+            $validations['login'] = "Incorrect username or password.";
           }
       }
+      echo $twig->render('login.html', [ 
+        'validations' => $validations]);
   }
+  else {
+    echo $twig->render('login.html');
+  }
+   
+  
 ?>
-</body>
-</html>
 
