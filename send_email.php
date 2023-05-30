@@ -13,6 +13,15 @@ function clean_input($data) {
     return $data;
 }
 
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+
+
 // Vérifiez si l'utilisateur est connecté en vérifiant la présence de la variable de session
 if (isset($_SESSION['username'])) {
     // Récupérez le nom d'utilisateur de la session
@@ -36,6 +45,7 @@ if (isset($_SESSION['username'])) {
         $favorites[$x] = $favorites[$x][0];
     }
 
+    $message = "";
     // loop through and add all names to the message
     for ($x = 0; $x < sizeof($favorites); $x++) {
         $message = $message . $favorites[$x]['name_meal'] . ", ";
@@ -56,9 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             // load the dish names into the message
             $result = mail($to,$subject,$message);
             if( $result == true ) {
-                echo "Message sent successfully...";
+                debug_to_console("Message sent successfully...");
              }else {
-                echo "Message could not be sent...";
+                debug_to_console("Message could not be sent...");
              }
         }
     }
